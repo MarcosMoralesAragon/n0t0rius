@@ -6,7 +6,7 @@ public class Course {
     private String ID;
     private String name;
     private String info;
-    private ArrayList<Exams> examns;
+    private ArrayList<Exams> exams;
 
 
     public String getID() {
@@ -30,11 +30,11 @@ public class Course {
         this.info = info;
     }
 
-    public ArrayList<Exams> getExamns() {
-        return examns;
+    public ArrayList<Exams> getExams() {
+        return exams;
     }
-    public void setExamns(ArrayList<Exams> examns) {
-        this.examns = examns;
+    public void setExams(ArrayList<Exams> exams) {
+        this.exams = exams;
     }
 
     @Override
@@ -43,6 +43,6 @@ public class Course {
                 "ID ='" + ID + '\'' +
                 ", Name ='" + name + '\'' +
                 ", Info ='" + info + '\'' +
-                ", Examenes =" + examns;
+                ", Examenes =" + exams;
     }
 }
