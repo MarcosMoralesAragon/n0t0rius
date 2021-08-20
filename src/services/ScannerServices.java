@@ -21,14 +21,15 @@ public class ScannerServices {
                 Integer.parseInt(scanner);
                 attempts++;
                 prints.failInputData(3-attempts);
-            } catch (ParseException e){
+            } catch (NumberFormatException e){
                 exit = true;
             }
-        }while (!exit || attempts != 3);
-        if (attempts ==3){
-            prints.outOfAttempts();
-            return null;
-        }
+            if (attempts == 3){
+                prints.outOfAttempts();
+                scanner = null;
+                exit = true;
+            }
+        }while (!exit);
         return scanner;
     }
     public int scannerInt(){
@@ -51,7 +52,6 @@ public class ScannerServices {
                 exit = true;
             }
         }while (!exit);
-
         return result;
     }
 }

@@ -1,3 +1,4 @@
+import services.CourseServices;
 import services.ScannerServices;
 import utils.Prints;
 
@@ -5,6 +6,7 @@ public class main {
      public static void main(String[] args) {
          Prints prints = new Prints();
          ScannerServices scanner = new ScannerServices();
+         CourseServices courseServices = new CourseServices();
 
          prints.welcome();
          int action = 0;
@@ -14,7 +16,7 @@ public class main {
             action = scanner.scannerInt();
             switch (action){
                 case 1:
-                    //TODO Crear nueva asignatura
+                    courseServices.createCourse();
                     break;
                 case 2:
                     //TODO Añadir examen
@@ -23,7 +25,7 @@ public class main {
                     //TODO Modificar
                     break;
                 case 4:
-                    //TODO Listar asignaturas
+                    courseServices.showCourses();
                     break;
                 case 5:
                     //TODO Listar examenes
@@ -49,6 +51,7 @@ public class main {
                 default:
                     break;
             }
+            prints.endAction();
         }while (!exit);
         prints.end();
     }

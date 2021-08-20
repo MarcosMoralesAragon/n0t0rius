@@ -40,9 +40,9 @@ public class Course {
     @Override
     public String toString() {
         return "Course" +
-                "ID ='" + ID + '\'' +
-                ", Name ='" + name + '\'' +
-                ", Info ='" + info + '\'' +
-                ", Examenes =" + exams;
+                "ID = " + ID + " / " +
+                " Name = " + name + " / " +
+                " Info = " + info + " / " +
+                " Examenes = " + exams;
     }
 }

@@ -25,5 +25,4 @@ public class IDGenerators {
         int asciiCode = (int) Math.floor(Math.random()*(122 - 97)+97);
         return String.valueOf((char) asciiCode);
     }
-
 }

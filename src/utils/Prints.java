@@ -36,4 +36,7 @@ public class Prints {
     public void outOfAttempts(){
         System.out.println("Se ha quedado sin intentos");
     }
+    public void insertData(String nameField){
+        System.out.println("Introduzca " + nameField);
+    }
 }
