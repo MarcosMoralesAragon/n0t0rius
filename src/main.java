@@ -1,4 +1,5 @@
 import services.CourseServices;
+import services.ExamServices;
 import services.ScannerServices;
 import utils.Prints;
 
@@ -7,6 +8,7 @@ public class main {
          Prints prints = new Prints();
          ScannerServices scanner = new ScannerServices();
          CourseServices courseServices = new CourseServices();
+         ExamServices examServices = new ExamServices();
 
          prints.welcome();
          int action = 0;
@@ -19,7 +21,7 @@ public class main {
                     courseServices.createCourse();
                     break;
                 case 2:
-                    //TODO Añadir examen
+                    examServices.createExam();
                     break;
                 case 3:
                     //TODO Modificar
@@ -28,7 +30,7 @@ public class main {
                     courseServices.showCourses();
                     break;
                 case 5:
-                    //TODO Listar examenes
+                    examServices.showExams();
                     break;
                 case 6:
                     //TODO Eliminar asignatura

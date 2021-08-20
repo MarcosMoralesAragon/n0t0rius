@@ -2,9 +2,25 @@ package models;
 
 public class Exams {
 
+    private String ID;
+    private String name;
     private int nota;
-    private String feelingsAboutExamn;
+    private String feelingsAboutExam;
     private String thingsToImprove;
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getID() {
+        return ID;
+    }
+    public void setID(String ID) {
+        this.ID = ID;
+    }
 
     public int getNota() {
         return nota;
@@ -13,11 +29,11 @@ public class Exams {
         this.nota = nota;
     }
 
-    public String getFeelingsAboutExamn() {
-        return feelingsAboutExamn;
+    public String getFeelingsAboutExam() {
+        return feelingsAboutExam;
     }
-    public void setFeelingsAboutExamn(String feelingsAboutExamn) {
-        this.feelingsAboutExamn = feelingsAboutExamn;
+    public void setFeelingsAboutExam(String feelingsAboutExam) {
+        this.feelingsAboutExam = feelingsAboutExam;
     }
 
     public String getThingsToImprove() {
@@ -29,9 +45,12 @@ public class Exams {
 
     @Override
     public String toString() {
-        return "Exams -->" +
-                "Nota=" + nota +
-                ", Feelings about the examn='" + feelingsAboutExamn + '\'' +
-                ", Things to improve='" + thingsToImprove + '\'';
+        return "Exams{" +
+                "ID='" + ID + '\'' +
+                ", name='" + name + '\'' +
+                ", nota=" + nota +
+                ", feelingsAboutExam='" + feelingsAboutExam + '\'' +
+                ", thingsToImprove='" + thingsToImprove + '\'' +
+                '}';
     }
 }
