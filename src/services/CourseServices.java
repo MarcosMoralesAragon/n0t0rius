@@ -19,4 +19,18 @@ public class CourseServices {
             System.out.println(course);
         }
     }
+    public Course searchCourseByID(String id){
+        Course result = new Course();
+        boolean found = false;
+        for(Course course : coursesArraylist){
+            if (course.getID().equals(id)){
+                result = course;
+                found = true;
+            }
+        }
+        if(!found){
+            result = null;
+        }
+        return result;
+    }
 }
